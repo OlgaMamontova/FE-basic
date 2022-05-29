@@ -1,0 +1,20 @@
+body{
+padding-bottom: 50px;
+background-color: #f1f1f1;
+}
+header{
+    text-align: center;
+    font-size: 36px;
+    padding: 10px 0 20px;
+}
+article{
+    width: 960px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 50px 70px;
+    box-sizing: border-box;
+}
+img{
+    width: 315px;
+    height: 235px;
+}
