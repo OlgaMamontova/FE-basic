@@ -54,9 +54,10 @@ opacity: 0.4;
     margin-right: 23px;
 }
 .main-image{
-    float: right;
-    margin-top: 95px;
-    margin-right: 233px;
+    display: inline-block;
+    margin-left: 6.3%;
+    position: relative;
+    top: 20px;
 }
 .main-image img{
     width: 533px;
