@@ -1,0 +1,216 @@
+@import 'variables.scss';
+@import 'mixin.scss';
+body{
+    font-family: 'Roboto', sans-serif;
+    color: $color_text;
+}
+h1{
+    @include text(50px, 500, 66px, $color_h);
+    letter-spacing: 1px;
+}
+h2{
+    @include text(36px, 500, 48px, $color_h);
+    margin-bottom: 16px;
+}
+h4{
+    @include text(16px, 500, 26px, $color_h);
+}
+p{
+    @include text(16px, 400, 26px, $color_text);
+    margin-bottom: 10px;
+}
+a:hover{
+    opacity: 0.6;
+}
+.logo{
+    a{
+    @include text(26px, 900, 38px, #37447E);  
+    text-decoration: none;
+    }
+} 
+header{
+    padding-top: 12px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    .btn-dark{
+        @include button(12px, 500, 18px,#ffffff, $color_button, 160px, 26px);
+        padding: 0;
+    }  
+    .menu{
+        li{
+            a{
+                padding: 0 30px;
+                @include text(14px, 400, 24px, $color_text_main);
+            }      
+        }
+    }
+}
+#main-screen{
+    padding-top: 305px;
+    height: 1112px;
+    background: url(./img/designer_1.svg) top right no-repeat;
+
+    h1{
+        margin-bottom: 19px;
+    }
+    p{
+        @include text(18px, 400, 30px, $color_text_main);
+    }
+    .btn{
+        @include button(16px, 500, 26px, #ffffff, $color_button, 189px, 36px);
+        margin-top: 62px;
+    }
+    .btn-light{
+        @include button-light;
+        margin-left: 30px;
+    }
+    .btn-dark:hover{
+        @include button-light;
+    }
+}
+.block_1{
+    margin-top: 110px;
+    .wrapper-cols{
+        margin-top: 80px;
+        h4{
+            margin-top: 13px;
+        }
+        p{
+            @include text(12px, 400, 18px, #5D6970);
+        }
+    }
+}
+.block_2{
+    margin-top: 230px;
+}
+.block_3{
+    margin-top: 215px;
+}
+.block_4{
+    margin-top: 215px;
+    margin-bottom: 170px;
+    .btn{
+        @include button(14px, 500, 24px, #ffffff, $color_button, 150px, 32px);
+        margin-top: 30px;
+    }
+}
+.block_5{
+    padding-top: 240px;
+    padding-bottom: 170px;
+    background: url(./img/Rectangle.svg) top center;
+    .price{
+        margin-top: 37px;
+        color: #222F65;
+        margin-bottom: 0;
+    }
+    .price-description{
+        color: #37447E;
+    }
+    .small-text{
+        @include text(14px, 400, 24px, #5D6970);
+        margin-top: 60px;
+    }
+    .btn{
+        @include button(14px, 500, 24px, #ffffff, $color_button, 189px, 32px);
+    }
+}
+footer{
+    background-color: #E7ECFF;    
+    .footer-1{
+        padding: 60px 0 40px;
+        border-bottom: 1px solid #CDD1D4;
+        @include text(14px, 500, 24px, #939EA4);
+        .btn{
+            @include button(12px, 500, 18px, #ffffff, $color_button, 109px, 26px);
+            padding: 0;
+        }
+        .btn-dark:hover{
+            @include button-light;
+         }
+    }
+    .footer-2{
+        padding: 20px 0 32px;
+        .menu{
+            li{
+                a{
+                    padding: 0 30px;
+                    @include text(14px, 400, 24px, #929ECC);
+                }      
+            }
+        }
+        .social a{
+            margin-left: 26px;
+            &:hover path{
+                fill: $color_button;
+            }
+        }
+    }
+}
+.btn-dark:hover{
+   @include button-light;
+}
+.btn-light:hover{
+    color: #fff !important;   
+    background-color: $color_button !important;
+}
+
+@media (min-width: 1400px){
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1125px;
+    }
+}
+@media (max-width: 991px){
+    #main-screen {
+        padding-top: 150px;
+        height: 741px;
+        background-size: 70%;
+    }
+}
+@media (max-width: 767px){
+    h2{
+        @include text(28px, 500, 36px, $color_h);
+    }
+    p{
+        @include text(15px, 400, 24px, $color_text);
+    }
+    .menu{
+        width: 100%;
+        .nav{
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .social{
+        width: 100%;
+        margin-top: 20px;
+    }
+    #main-screen{
+        background: linear-gradient(to right, rgba(255, 255, 255, 0.7) 0%, rgba(237, 237, 237, 0.7) 100%), url(./img/designer_1.svg) top right/70% no-repeat;
+        height: 680px;
+        h1{
+            @include text(36px, 500, 50px, $color_h);
+        }
+        p{
+            @include text(16px, 400, 26px, $color_text_main);
+        }
+    }
+    .block_2, .block_3, .block_4{
+        margin-top: 130px;
+    }
+    .block_4{
+        margin-bottom: 100px;
+    }
+    .block_5{
+        padding-top: 170px;
+        padding-bottom: 140px;
+    }
+}
+@media (max-width: 575px){
+    #main-screen{
+        background-size: 100%;
+        .btn{
+            width: 150px;
+        }
+    }    
+}
